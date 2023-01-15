@@ -1,9 +1,15 @@
 package lesson_14;
 
-public class Car2  extends Car1{
+public class Car2{
 
     /////////////////////////////////// contstructor /////////////////
 
+    private String brand;
+    private String model;
+    private double engineVolume;
+    private String color;
+    private int year;
+    private String country;
 
       public Car2(String brand, String model, double engineVolume, String color, int year, String country) {
           setBrand(brand);
@@ -27,42 +33,71 @@ public class Car2  extends Car1{
     }
     /////////////////////////////////////// setters /////////////////////////
 
-    @Override
+
     public void setBrand(String brand) {
-        super.setBrand(simpleCheckString(brand,"Default_Brand"));
+        this.brand=simpleCheckString(brand,"Default_Brand");
     }
-    @Override
+
     public void setModel(String model) {
-        super.setModel(simpleCheckString(model,"Default_model"));
+        this.model=simpleCheckString(model,"Default_model");
     }
-    @Override
+
     public void setEngineVolume(double engineVolume) {
         double defaultVolume = 1.5;
         if(engineVolume>0)
-            super.setEngineVolume(engineVolume);
+            this.engineVolume=engineVolume;
         else {
             System.out.println("Некорректный ввод. Значение будет измененено на :"+defaultVolume);
-            super.setEngineVolume(defaultVolume);
+            this.engineVolume=defaultVolume;
         }
     }
-    @Override
+
     public void setColor(String color) {
-        super.setColor(simpleCheckString(color,"Default_White"));
+        this.color=simpleCheckString(color,"Default_White");
     }
-    @Override
+
     public void setYear(int year) {
         int defaultYear = 2000;
         if(year>1900)
-            super.setYear(year);
+           this.year=year;
         else {
             System.out.println("Некорректный ввод. Значение будет измененено на :"+defaultYear);
-            super.setYear(defaultYear);
+            this.year=defaultYear;
         }
     }
-    @Override
+
     public void setCountry(String country) {
-        super.setCountry(simpleCheckString(country,"Default_country"));
+        this.country=simpleCheckString(country,"Default_country");
     }
 
 
+    public String toString() {
+        return String.format("Brand: %1$8s model: %2$8s Volume: %3$.2f Color: %4$7s" +
+                " Year: %5$d Country: %6$7s","'"+brand+"'","'"+model+"'",engineVolume, color, year,country);
+    }
+    ///////////////// getters  ///////////
+
+    public String getBrand() {
+        return brand;
+    }
+
+    public String getModel() {
+        return model;
+    }
+
+    public double getEngineVolume() {
+        return engineVolume;
+    }
+
+    public String getColor() {
+        return color;
+    }
+
+    public int getYear() {
+        return year;
+    }
+
+    public String getCountry() {
+        return country;
+    }
 }

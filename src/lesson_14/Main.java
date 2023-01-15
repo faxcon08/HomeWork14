@@ -28,11 +28,11 @@ public class Main {
 
         System.out.println(" ------------------------ Second Task 1.2 ------------------------"); //////////////////////////////// 1_2  ///////////////////////////////
 
-        Car1 middleCar1 = new Car1("Lada", "Granta", 1.7, "Желтый", 2015, "Россия");
-        Car1 middleCar2 = new Car1("Audi", "A8 50 L TDI quattro", 3.0, "Черный", 2020, "Германия");
-        Car1 middleCar3 = new Car1("BMW", "Z8", 3.0, "Красный", 2021, "Германия");
-        Car1 middleCar4 = new Car1("Kia", "Sportage", 2.4, "Красный", 2018, "Южная Корея");
-        Car1 middleCar5 = new Car1("Hyundai", "Avate", 1.6, "Оранжевый", 2016, "Южная Корея");
+        Car2 middleCar1 = new Car2("Lada", "Granta", 1.7, "Желтый", 2015, "Россия");
+        Car2 middleCar2 = new Car2("Audi", "A8 50 L TDI quattro", 3.0, "Черный", 2020, "Германия");
+        Car2 middleCar3 = new Car2("BMW", "Z8", 3.0, "Красный", 2021, "Германия");
+        Car2 middleCar4 = new Car2("Kia", "Sportage", 2.4, "Красный", 2018, "Южная Корея");
+        Car2 middleCar5 = new Car2("Hyundai", "Avate", 1.6, "Оранжевый", 2016, "Южная Корея");
 
         System.out.println(middleCar1); System.out.println(middleCar2); System.out.println(middleCar3); System.out.println(middleCar4); System.out.println(middleCar5);
 
